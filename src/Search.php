@@ -1,6 +1,6 @@
 <?php
 
-namespace vmc\DigitalCep;
+namespace dawsompablo\DigitalCep;
 
 class Search
 {

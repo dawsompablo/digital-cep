@@ -2,7 +2,7 @@
 
 require 'vendor/autoload.php';
 
-use vmc\DigitalCep\Search;
+use dawsompablo\DigitalCep\Search;
 
 $busca = new Search;
 
