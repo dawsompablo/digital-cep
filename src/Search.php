@@ -2,15 +2,23 @@
 
 namespace dawsompablo\DigitalCep;
 
+/**
+ * Main Class
+ */
 class Search
 {
     private $urlBase = "https://viacep.com.br/ws/";
 
-    public function getAddressFromZipcode(string $zipcode): array
+    /**
+     * Put a zip code and revice from ViaCep one address
+     * @var string $zipCode
+     * @return array
+     */
+    public function getAddressFromZipcode(string $zipCode): array
     {
-        $zipcode = preg_replace("/[^0-9]/", "", $zipcode);
+        $zipCode = preg_replace("/[^0-9]/", "", $zipCode);
 
-        $get = file_get_contents($this->urlBase . $zipcode . "/json");
+        $get = file_get_contents($this->urlBase . $zipCode . "/json");
 
         return (array) json_decode($get);
     }
